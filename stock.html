@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SITTA UT - Informasi Bahan Ajar</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body class="theme-dark app-page">
+  <header class="app-header">
+    <div class="app-header-inner">
+      <div class="brand-left">
+        <img src="assets/logo-ut.png" alt="Logo UT" class="brand-logo" />
+        <div class="brand-name">
+          <strong>SITTA</strong>
+          <span>Universitas Terbuka</span>
+        </div>
+      </div>
+
+      <nav class="app-nav" aria-label="Navigasi Utama">
+        <a class="nav-link" href="dashboard.html">Beranda</a>
+        <a class="nav-link active" href="stock.html">Informasi Bahan Ajar</a>
+        <a class="nav-link" href="stock.html#katalog">Bahan Ajar</a>
+        <a class="nav-link" href="laporan.html">Laporan</a>
+        <a class="nav-link" href="histori.html">Histori Transaksi</a>
+      </nav>
+
+      <div class="account-area">
+        <button class="account-btn" type="button" id="accountBtn">
+          <span class="account-label">Akun:</span>
+          <span id="navAccountName" class="account-name">-</span>
+          <span class="account-caret">▾</span>
+        </button>
+
+        <div class="account-menu" id="accountMenu">
+          <div class="account-meta">
+            <div class="account-meta-name" id="accountName">-</div>
+            <div class="account-meta-role" id="accountRole">-</div>
+          </div>
+          <button class="menu-btn" type="button" id="logoutBtn">Logout</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="page-head" id="katalog">
+      <h1 class="page-title">Katalog Bahan Ajar</h1>
+      <p class="page-subtitle">
+        Cari dan pilih bahan ajar, lalu tambahkan ke keranjang.
+      </p>
+
+      <div class="catalog-tools">
+        <input id="catalogSearch" type="text" class="input"
+               placeholder="Pencarian kata kunci (judul / kode / lokasi)..." />
+      </div>
+    </section>
+
+    <section class="catalog-layout">
+      <div class="catalog-grid" id="catalogGrid" aria-label="Daftar Bahan Ajar">
+      </div>
+
+      <aside class="admin-panel" id="adminPanel" hidden>
+        <h2 class="panel-title">Panel Admin</h2>
+        <p class="muted">Cari judul buku untuk <b>Tambah Stok</b> dan <b>Ubah Harga</b>.</p>
+
+        <label class="field-label" for="adminBookSearch">Judul/Kode Buku</label>
+        <input id="adminBookSearch" type="text" class="input" placeholder="Ketik judul atau kode..." />
+
+        <div class="admin-actions">
+          <div class="field">
+            <label class="field-label" for="adminAddStock">Tambah Stok</label>
+            <input id="adminAddStock" type="number" class="input" min="1" placeholder="contoh: 10" />
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="adminSetPrice">Ubah Harga (Rp)</label>
+            <input id="adminSetPrice" type="number" class="input" min="0" placeholder="contoh: 145000" />
+          </div>
+        </div>
+
+        <button class="btn btn-yellow btn-block" type="button" id="adminSaveBtn">
+          Simpan Perubahan
+        </button>
+
+        <small class="form-info" id="adminInfo"></small>
+      </aside>
+    </section>
+
+    <section class="cart-section">
+      <div class="cart-head">
+        <h2 class="cart-title">Keranjang</h2>
+        <p class="muted">Atur jumlah, hapus item, lalu checkout.</p>
+      </div>
+
+      <div class="cart-list" id="cartList">
+      </div>
+
+      <div class="cart-summary" id="cartSummary">
+        <div class="summary-row">
+          <span>Total Item</span>
+          <b id="cartTotalItem">0</b>
+        </div>
+        <div class="summary-row">
+          <span>Total Harga</span>
+          <b id="cartTotalPrice">Rp 0</b>
+        </div>
+
+        <button class="btn btn-blue btn-block" type="button" id="checkoutBtn" disabled>
+          Checkout
+        </button>
+
+        <div class="receipt-box" id="receiptBox" hidden>
+          <h3 class="receipt-title">Struk & Resi</h3>
+          <div id="receiptContent" class="receipt-content"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="JS/script.js"></script>
+  <script src="JS/data.js"></script>
+  <script src="JS/apps.js"></script>
+</body>
+</html>

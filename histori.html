@@ -1,0 +1,81 @@
+<!DOCTYPE html><<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SITTA UT - Tracking Pengiriman</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body class="theme-dark app-page">
+  <header class="app-header">
+    <div class="app-header-inner">
+      <div class="brand-left">
+        <img src="assets/logo-ut.png" alt="Logo Universitas Terbuka" />
+        <div class="brand-name">
+          <strong>SITTA</strong>
+          <span>Universitas Terbuka</span>
+        </div>
+      </div>
+
+      <nav class="app-nav" aria-label="Navigasi Utama">
+        <a href="dashboard.html">Beranda</a>
+        <a href="stock.html">Informasi Bahan Ajar</a>
+        <a href="stock.html#katalog">Bahan Ajar</a>
+        <a href="laporan.html">Laporan</a>
+        <a href="histori.html">Histori Transaksi</a>
+      </nav>
+
+      <div class="account-area">
+        <button class="account-btn" type="button" id="accountBtn">
+          <span class="account-label">Akun:</span>
+          <span id="navAccountName" class="account-name">-</span>
+          <span class="account-caret">▾</span>
+        </button>
+
+        <div class="account-menu" id="accountMenu">
+          <div class="account-meta">
+            <div class="account-meta-name" id="accountName">-</div>
+            <div class="account-meta-role" id="accountRole">-</div>
+          </div>
+          <button class="menu-btn" type="button" id="logoutBtn">Logout</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main tracking-page">
+    <section class="tracking-wrap">
+      <div class="tracking-card">
+        <h1 class="tracking-title">🚚 Tracking Pengiriman</h1>
+
+        <form id="trackingForm" class="tracking-form">
+          <div class="tracking-row">
+            <input
+              id="resiInput"
+              type="text"
+              class="input tracking-input"
+              placeholder="Masukkan Nomor Resi / DO (contoh: 2023001234)"
+              required
+            />
+            <button type="submit" class="btn btn-yellow tracking-btn">Cari</button>
+          </div>
+
+          <small id="trackingError" class="form-error" aria-live="polite"></small>
+        </form>
+
+        <div id="trackingResult" class="tracking-result" hidden>
+        </div>
+
+        <div class="tracking-footer">
+          <a href="dashboard.html" class="link-back">← Kembali ke Dashboard</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="JS/script.js"></script>
+  <script src="JS/data.js"></script>
+  <script src="JS/apps.js"></script>
+</body>
+</html>
+``

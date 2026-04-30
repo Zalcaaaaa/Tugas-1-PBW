@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SITTA UT - Beranda</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body class="theme-dark app-page">
+  <header class="app-header">
+    <div class="app-header-inner">
+      <div class="brand-left">
+        <img src="assets/logo-ut.png" alt="Logo UT" class="brand-logo" />
+        <div class="brand-name">
+          <strong>SITTA</strong>
+          <span>Universitas Terbuka</span>
+        </div>
+      </div>
+
+      <nav class="app-nav" aria-label="Navigasi Utama">
+        <a class="nav-link active" href="dashboard.html">Beranda</a>
+        <a class="nav-link" href="stock.html">Informasi Bahan Ajar</a>
+        <a class="nav-link" href="stock.html#katalog">Bahan Ajar</a>
+        <a class="nav-link" href="laporan.html">Laporan</a>
+        <a class="nav-link" href="histori.html">Histori Transaksi</a>
+      </nav>
+
+      <div class="account-area">
+        <button class="account-btn" type="button" id="accountBtn">
+          <span class="account-label">Akun:</span>
+          <span id="navAccountName" class="account-name">-</span>
+          <span class="account-caret">▾</span>
+        </button>
+
+        <div class="account-menu" id="accountMenu">
+          <div class="account-meta">
+            <div class="account-meta-name" id="accountName">-</div>
+            <div class="account-meta-role" id="accountRole">-</div>
+          </div>
+          <button class="menu-btn" type="button" id="logoutBtn">Logout</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="hero-welcome">
+      <div class="welcome-line">
+        <img src="assets/logo-ut.png" alt="Logo UT" class="welcome-logo" />
+        <h1 class="welcome-text">
+          Selamat Datang, <span id="welcomeName">-</span>
+          <small class="welcome-sub">(<span id="welcomeRole">-</span>)</small>
+        </h1>
+        <button class="btn btn-yellow btn-small" type="button" id="logoutTopBtn">Logout</button>
+      </div>
+
+      <h2 class="menu-title">Menu Utama</h2>
+
+      <div class="menu-grid">
+        <a class="menu-card" href="stock.html">
+          <div class="menu-icon">📚</div>
+          <div class="menu-name">Informasi Bahan Ajar</div>
+        </a>
+
+        <a class="menu-card" href="tracking.html">
+          <div class="menu-icon">🚚</div>
+          <div class="menu-name">Tracking Pengiriman</div>
+        </a>
+
+        <a class="menu-card" href="laporan.html">
+          <div class="menu-icon">📈</div>
+          <div class="menu-name">Laporan</div>
+        </a>
+
+        <a class="menu-card" href="histori.html">
+          <div class="menu-icon">🕘</div>
+          <div class="menu-name">Histori Transaksi</div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="JS/script.js"></script>
+  <script src="JS/data.js"></script>
+  <script src="JS/apps.js"></script>
+</body>
+</html>

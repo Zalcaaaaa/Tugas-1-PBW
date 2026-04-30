@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SITTA UT - Laporan</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body class="theme-dark app-page">
+  <header class="app-header">
+    <div class="app-header-inner">
+      <div class="brand-left">
+        <img src="assets/logo-ut.png" alt="Logo Universitas Terbuka" />
+        <div class="brand-name">
+          <strong>SITTA</strong>
+          <span>Universitas Terbuka</span>
+        </div>
+      </div>
+
+      <nav class="app-nav" aria-label="Navigasi Utama">
+        <a href="dashboard.html">Beranda</a>
+        <a href="stock.html">Informasi Bahan Ajar</a>
+        <a href="stock.html#katalog">Bahan Ajar</a>
+        <a href="laporan.html" aria-current="page">Laporan</a>
+        <a href="histori.html">Histori Transaksi</a>
+      </nav>
+
+      <div class="account-area">
+        <button class="account-btn" type="button" id="accountBtn">
+          <span class="account-label">Akun:</span>
+          <span id="navAccountName" class="account-name">-</span>
+          <span class="account-caret">▾</span>
+        </button>
+
+        <div class="account-menu" id="accountMenu">
+          <div class="account-meta">
+            <div class="account-meta-name" id="accountName">-</div>
+            <div class="account-meta-role" id="accountRole">-</div>
+          </div>
+          <button class="menu-btn" type="button" id="logoutBtn">Logout</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="report-head">
+      <h1 class="page-title">Laporan</h1>
+      <p class="page-subtitle muted">
+        Ringkasan aktivitas transaksi dan data bahan ajar.
+      </p>
+
+      <div class="report-filters">
+        <div class="field">
+          <label class="field-label" for="filterFrom">Dari</label>
+          <input id="filterFrom" type="date" class="input" />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="filterTo">Sampai</label>
+          <input id="filterTo" type="date" class="input" />
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="filterType">Jenis</label>
+          <select id="filterType" class="input">
+            <option value="ringkasan">Ringkasan</option>
+            <option value="transaksi">Transaksi</option>
+            <option value="bahanajar">Bahan Ajar</option>
+          </select>
+        </div>
+
+        <button type="button" class="btn btn-blue" id="btnGenerateReport">Generate</button>
+      </div>
+    </section>
+
+    <section class="report-stats">
+      <div class="stat-card">
+        <h3>Total Transaksi</h3>
+        <p id="reportTotalTrx" class="stat-value">0</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Total Item Terjual</h3>
+        <p id="reportTotalItem" class="stat-value">0</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Total Pendapatan</h3>
+        <p id="reportRevenue" class="stat-value">Rp 0</p>
+      </div>
+    </section>
+
+    <section class="panel report-table">
+      <h2 class="panel-title">Detail Laporan</h2>
+      <div class="table-wrap" id="reportTableWrap">
+        <!-- Akan diisi JS -->
+        <p class="muted">Belum ada data. Silakan lakukan transaksi di halaman Bahan Ajar.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="JS/script.js"></script>
+  <script src="JS/data.js"></script>
+  <script src="JS/apps.js"></script>
+</body>
+</html>
